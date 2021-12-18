@@ -5,7 +5,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f1f1f1;
+  background-image: url('https://cdn.wallpapersafari.com/98/43/kTo92a.jpg');
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+
+  -webkit-animation: backgroundScroll 30s linear 1;
+  -webkit-animation-fill-mode: both;
+  animation: backgroundScroll linear 30s 1;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  -webkit-animation-direction: alternate-reverse;
 }
 
 code {
@@ -15,11 +26,11 @@ code {
 
 .navbar {
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 0 16px;
   height: 70px;
   border: 1px solid #e6e6e6;
-  background: #fff;
+  background-color: rgba(255, 255, 255, 7);
 }
 
 #logo {
@@ -41,7 +52,7 @@ code {
   margin-bottom: 50px;
 }
 
-.search-result {
+/* .search-result {
   display: flex;
   background-color: #FFF;
   box-sizing: border-box;
@@ -58,13 +69,28 @@ code {
 
 .search-result .right h1 {
   margin-top: 5px;
-}
+} */
 
 .stats div {
   font-size: 16px;
 }
 
-#person-name {
-  color: gray;
-  margin-bottom: 5px;
+@keyframes backgroundScroll {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -400px 0px;
+  }
+}
+
+@-webkit-keyframes backgroundScroll {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -400px 0px;
+  }
 }
