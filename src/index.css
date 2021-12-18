@@ -63,3 +63,8 @@ code {
 .stats div {
   font-size: 16px;
 }
+
+#person-name {
+  color: gray;
+  margin-bottom: 5px;
+}
