@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Navbar from './components/Navbar';
+import SearchBar from './components/SearchBar';
+import SearchResults from './components/SearchResults';
 
 
 function App() {
   return (
     <div className="App">
-      Hello word
+      <Navbar />
+      <SearchBar />
+      <SearchResults />
     </div>
   );
 }
