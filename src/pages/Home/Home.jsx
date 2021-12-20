@@ -14,8 +14,6 @@ function Home() {
       `https://www.superheroapi.com/api.php/4866064003433150/search/${searchText}`
     )
     const data = await response.json()
-    console.log('searchHeroes -> data', data)
-
     setSuperHeroData(data.results)
   }
 

@@ -4,7 +4,6 @@ import Modal from './Modal/Modal'
 function SearchResultItem({ data }) {
   const [show, setShow] = useState(false)
 
-  console.log('data', data)
   return (
     <div className="search-result">
       <div className="left">
