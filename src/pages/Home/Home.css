@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Hero;
+  src: url(/src/assets/fonts/Loli\ Pop.ttf);
+}
+
+body {
+  font-family: 'montserrat', sans-serif;
+	background-color: #223343;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+
+}
+
+#logo {
+  font-family: Hero;
+  font-size: 3.5rem;
+  margin-top: 10px;
+
+  width: 300px;
+  text-align: center;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  
+  color: #fff;
+}
+
+.main {
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+#search-bar {
+  display: block;
+	width: 100%;
+	padding: 15px;
+  
+	border: none;
+	outline: none;
+	background: none;
+  
+	background-color: #EEE;
+	border-radius: 8px;
+  
+	color: #53565A;
+	font-size: 20px;
+	font-weight: 300;
+  
+	transition: 0.4s ease-out; 
+}
+#search-bar:focus {
+  box-shadow: 0px 0px 8px 3px #4484C4;
+
+}
+.search-result {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  padding: 10px;
+
+  border-radius: 10px;
+  overflow: hidden;
+
+  transition: 0.4s ease-out;
+}
+
+.search-result:hover {
+  box-shadow: 0px 0px 8px 3px #4484C4;
+}
+.search-result .left img {
+  height: 160px;
+  border-radius: 10px;
+}
+
+.search-result .right {
+  padding-left: 30px;
+}
+
+.search-result .right h1 {
+  margin-top: 10px;
+}
+
+.person-name {
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+button{
+  margin-top: 10px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase ;
+
+  outline: none;
+  background: #223343;
+  color: #FFF;
+
+  transition: 0.4s ease-out;
+}
+
+button:hover{
+  background: #FFF;
+  color: #223343;
+}
+.stats div {
+  font-size: 16px;
+}

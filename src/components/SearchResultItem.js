@@ -1,32 +1,28 @@
-import React from 'react';
-import "./SearchResultItem.scss"
+import React, { useState } from 'react'
+import Modal from './Modal/Modal'
 
-function SearchResultItem(props) {
-  const {data} = props
+function SearchResultItem({ data }) {
+  const [show, setShow] = useState(false)
 
   console.log('data', data)
   return (
-    <div className="wrapper">
-      <div className="card">
-        <div className='card__body'>
-        
-          <img src={data.image.url} className="card__image" alt="bat hero" />
-        
-        
-          <h1 className="card__title">{data.name}</h1>
-          <span 
-            id="person-name">
-            {data.biography['full-name']}
-          </span>
-           
-              <div>strength: {data.powerstats.strength}</div>
-              <div>speed: {data.powerstats.speed}</div>
-              <div>power: {data.powerstats.power}</div>
-              
+    <div className="search-result">
+      <div className="left">
+        <img src={data.image.url} className="person-img" alt={data.name} />
+      </div>
+
+      <div className="right">
+        <h1 className="person-name">{data.name}</h1>
+        <div className="stats">
+          <div>Nome: {data.biography['full-name']}</div>
+          <div>Primeira Aparição: {data.biography['first-appearance']}</div>
+          <div>Status: {data.biography['alignment']}</div>
+          <button onClick={() => setShow(true)}>ver mais</button>
+          <Modal onClose={() => setShow(false)} show={show} hero={data} />
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default SearchResultItem;
+export default SearchResultItem

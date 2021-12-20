@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react'
 
 function SearchBar(props) {
- const {handleChange, searchText} = props;
- 
+  const { handleChange, searchText } = props
+
   return (
     <div>
-      <input 
-        id="search-bar" 
-        type="search" 
-        placeholder="Procure um super herói..." 
+      <input
+        id="search-bar"
+        type="search"
+        placeholder="Procure um super herói..."
         onChange={handleChange}
         value={searchText}
       />
     </div>
-  );
+  )
 }
 
-export default SearchBar;
+export default SearchBar
